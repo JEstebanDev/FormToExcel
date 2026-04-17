@@ -25,23 +25,6 @@ function FormWizard() {
 
   return (
     <div className="min-h-screen bg-gft-gray flex flex-col items-center py-10 px-4">
-      {/* Header */}
-      <header className="w-full max-w-3xl mb-8">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gft-lightblue rounded-lg flex items-center justify-center text-white text-xl font-bold">
-            G
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold text-gft-blue leading-tight">
-              Generador de Perfil
-            </h1>
-            <p className="text-sm text-gray-500">
-              Completa el formulario para generar el Excel compatible con la extensión de auto-llenado.
-            </p>
-          </div>
-        </div>
-      </header>
-
       {/* Card principal */}
       <main className="w-full max-w-3xl bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
         <Stepper currentStep={step} />
