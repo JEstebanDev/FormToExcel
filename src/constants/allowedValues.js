@@ -28,8 +28,8 @@ export const COLOMBIA_DEPARTMENTS = [
     ],
   },
   {
-    department: "Bogotá D.C.",
-    cities: ["Bogotá"],
+    department: "Bogota",
+    cities: ["Bogota"],
   },
   {
     department: "Bolívar",
