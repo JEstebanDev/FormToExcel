@@ -6,6 +6,7 @@ import Step2Experience from "./components/steps/Step2Experience";
 import Step3Skills from "./components/steps/Step3Skills";
 import Step4Education from "./components/steps/Step4Education";
 import { generateAndDownloadExcel } from "./utils/excelGenerator";
+import logoGft from "./public/logogft.png";
 
 function FormWizard() {
   const { step, goNext, goPrev } = useFormContext();
@@ -27,6 +28,15 @@ function FormWizard() {
     <div className="min-h-screen bg-gft-gray flex flex-col items-center py-10 px-4">
       {/* Card principal */}
       <main className="w-full max-w-3xl bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
+        {/* Encabezado */}
+        <div className="flex items-center gap-2 mb-6">
+          <img src={logoGft} alt="Logo GFT" className="h-8 w-auto" />
+          <div className="flex flex-col">
+            <h1 className="text-lg font-bold text-gray-800 leading-tight">Formato SkillHacking</h1>
+            <p className="text-xs text-gray-500">Leidy Riascos</p>
+          </div>
+        </div>
+
         <Stepper currentStep={step} />
 
         {step === 0 && <Step1BasicInfo onNext={goNext} />}
@@ -46,7 +56,7 @@ function FormWizard() {
 
       {/* Footer */}
       <footer className="mt-8 text-xs text-gray-400 text-center">
-        Herramienta interna de generación de perfiles de candidatos
+        Desarrollado por Juan Castaño Holguin
       </footer>
     </div>
   );

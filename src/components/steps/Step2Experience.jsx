@@ -69,15 +69,6 @@ export default function Step2Experience({ onNext, onPrev }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off" className="flex flex-col gap-6">
-      <h2 className="text-xl font-semibold text-gft-blue border-b border-gray-200 pb-2">
-        Paso 2 — Experiencia Laboral
-      </h2>
-
-      <p className="text-sm text-gray-500">
-        Agrega hasta <strong>3 experiencias</strong> laborales. La extensión las usará para rellenar el
-        formulario en el mismo orden.
-      </p>
-
       {fields.map((field, index) => {
         const errs = errors.experiencia?.[index];
         const isActual = watchedExperiencia?.[index]?.es_trabajo_actual;

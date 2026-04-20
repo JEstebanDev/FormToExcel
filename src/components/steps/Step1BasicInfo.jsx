@@ -45,7 +45,6 @@ const schema = z.object({
 
 export default function Step1BasicInfo({ onNext }) {
   const { data, updateData } = useFormContext();
-  const isFirstRender = useRef(true);
 
   const {
     register,
@@ -82,12 +81,11 @@ export default function Step1BasicInfo({ onNext }) {
     ? dept.cities
     : COLOMBIA_DEPARTMENTS.flatMap((d) => d.cities).sort((a, b) => a.localeCompare(b));
 
-  // Reset ciudad when departamento changes (skip first render)
+  // Reset ciudad only when departamento actually changes to a different value
+  const prevDepartamento = useRef(data.departamento || "");
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+    if (selectedDepartamento === prevDepartamento.current) return;
+    prevDepartamento.current = selectedDepartamento;
     setValue("ciudad", "", { shouldValidate: false });
   }, [selectedDepartamento, setValue]);
 
@@ -101,21 +99,15 @@ export default function Step1BasicInfo({ onNext }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off" className="flex flex-col gap-5">
-      <h2 className="text-xl font-semibold text-gft-blue border-b border-gray-200 pb-2">
-        Paso 1 — Información Básica
-      </h2>
-
-      {/* Nombre completo */}
-      <FormField label="Nombre Completo" error={errors.nombre_completo?.message} required>
-        <Input
-          placeholder="Ej: Juan Carlos Pérez López"
-          error={errors.nombre_completo}
-          {...register("nombre_completo")}
-        />
-      </FormField>
-
-      {/* Cédula + Email */}
+      {/* Nombre completo + Cédula */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <FormField label="Nombre Completo" error={errors.nombre_completo?.message} required>
+          <Input
+            placeholder="Ej: Juan Carlos Pérez López"
+            error={errors.nombre_completo}
+            {...register("nombre_completo")}
+          />
+        </FormField>
         <FormField label="Número de Cédula" error={errors.cedula?.message} required>
           <Input
             placeholder="Ej: 1000123456"
@@ -124,24 +116,26 @@ export default function Step1BasicInfo({ onNext }) {
             {...register("cedula")}
           />
         </FormField>
+      </div>
+
+      {/* Email + Fecha de nacimiento */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <FormField label="Email" error={errors.email?.message} required>
           <Input type="email" placeholder="nombre@email.com" error={errors.email} {...register("email")} />
         </FormField>
+        <FormField
+          label="Fecha de Nacimiento"
+          error={errors.fecha_nacimiento?.message}
+          hint="Formato: DD/MM/AAAA"
+        >
+          <Input
+            placeholder="Ej: 15/04/1990"
+            error={errors.fecha_nacimiento}
+            allowPattern="0-9/"
+            {...register("fecha_nacimiento")}
+          />
+        </FormField>
       </div>
-
-      {/* Fecha de nacimiento */}
-      <FormField
-        label="Fecha de Nacimiento"
-        error={errors.fecha_nacimiento?.message}
-        hint="Formato: DD/MM/AAAA"
-      >
-        <Input
-          placeholder="Ej: 15/04/1990"
-          error={errors.fecha_nacimiento}
-          allowPattern="0-9/"
-          {...register("fecha_nacimiento")}
-        />
-      </FormField>
 
       {/* Departamento + Ciudad */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

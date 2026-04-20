@@ -56,10 +56,6 @@ export default function Step4Education({ onPrev, onGenerate, isGenerating }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off" className="flex flex-col gap-6">
-      <h2 className="text-xl font-semibold text-gft-blue border-b border-gray-200 pb-2">
-        Paso 4 — Certificaciones
-      </h2>
-
       {/* Certificaciones */}
       <div>
         <h3 className="text-sm font-semibold text-gray-700 mb-3">

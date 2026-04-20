@@ -1,7 +1,7 @@
 // Barra de progreso con los 4 pasos del formulario
 
 const STEPS = [
-  { label: "Información Básica", icon: "👤" },
+  { label: "Info Básica", icon: "👤" },
   { label: "Experiencia", icon: "💼" },
   { label: "Habilidades", icon: "⚙️" },
   { label: "Educación", icon: "🎓" },

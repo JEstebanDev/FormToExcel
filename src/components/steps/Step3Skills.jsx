@@ -19,15 +19,7 @@ export default function Step3Skills({ onNext, onPrev }) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div>
-        <h2 className="text-xl font-semibold text-gft-blue border-b border-gray-200 pb-2">
-          Paso 3 — Habilidades Técnicas
-        </h2>
-        <p className="text-sm text-gray-500 mt-2">
-          Selecciona hasta <strong>4 tecnologías por categoría</strong>. Las opciones disponibles están
-          filtradas para el rol <strong className="text-gft-blue">{rolLabel}</strong>.
-        </p>
-      </div>
+
 
       <MultiSelect rol={data.rol} skills={skills} onChange={setSkills} />
 
