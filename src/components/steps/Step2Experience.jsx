@@ -20,7 +20,7 @@ const experienciaSchema = z.object({
     .string()
     .optional()
     .refine(
-      (val) => !val || val === "actualidad" || /^\d{2}\/\d{4}$/.test(val),
+      (val) => !val || /^\d{2}\/\d{4}$/.test(val),
       "Formato inválido. Usa MM/AAAA (ej: 12/2023)"
     ),
   es_trabajo_actual: z.boolean().optional(),
@@ -49,6 +49,7 @@ export default function Step2Experience({ onNext, onPrev }) {
     watch,
     trigger,
     getValues,
+    setValue,
     formState: { errors },
   } = useForm({
     mode: "onBlur",
@@ -152,7 +153,7 @@ export default function Step2Experience({ onNext, onPrev }) {
               <FormField
                 label="Período de Fin"
                 error={errs?.periodo_fin?.message}
-                hint={isActual ? "Se usará 'actualidad' automáticamente" : "Formato: MM/AAAA"}
+                hint={isActual ? `Se usará 12/${new Date().getFullYear()} automáticamente` : "Formato: MM/AAAA"}
               >
                 <Input
                   placeholder="12/2023"
@@ -171,7 +172,17 @@ export default function Step2Experience({ onNext, onPrev }) {
               <input
                 type="checkbox"
                 className="accent-gft-lightblue w-4 h-4"
-                {...register(`experiencia.${index}.es_trabajo_actual`)}
+                checked={!!watchedExperiencia?.[index]?.es_trabajo_actual}
+                onChange={(e) => {
+                  const checked = e.target.checked;
+                  setValue(`experiencia.${index}.es_trabajo_actual`, checked);
+                  if (checked) {
+                    const currentYear = new Date().getFullYear();
+                    setValue(`experiencia.${index}.periodo_fin`, `12/${currentYear}`);
+                  } else {
+                    setValue(`experiencia.${index}.periodo_fin`, "");
+                  }
+                }}
               />
               Trabajo actualmente aquí
             </label>

@@ -30,12 +30,12 @@
 
 import * as XLSX from "xlsx";
 
-/** Formatea un período como "MM/AAAA – MM/AAAA" o "MM/AAAA – actualidad" */
+/** Formatea un período como "MM/AAAA – MM/AAAA" */
 function buildPeriodString(exp) {
   const inicio = exp.periodo_inicio?.trim() ?? "";
   let fin;
   if (exp.es_trabajo_actual) {
-    fin = "actualidad";
+    fin = `12/${new Date().getFullYear()}`;
   } else {
     fin = exp.periodo_fin?.trim() ?? "";
   }
