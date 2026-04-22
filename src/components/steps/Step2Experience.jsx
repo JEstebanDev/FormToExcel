@@ -5,26 +5,40 @@ import { useFormContext } from "../../context/FormContext";
 import FormField from "../ui/FormField";
 import Input from "../ui/Input";
 
-const experienciaSchema = z.object({
-  compania: z.string().min(1, "El nombre de la compañía es obligatorio"),
-  cargo: z.string().min(1, "El cargo es obligatorio"),
-  actividades: z
-    .string()
-    .min(10, "Describe las actividades realizadas")
-    .max(1500, "Máximo 1500 caracteres"),
-  periodo_inicio: z
-    .string()
-    .min(1, "Ingresa el período de inicio")
-    .regex(/^\d{2}\/\d{4}$/, "Formato inválido. Usa MM/AAAA (ej: 03/2021)"),
-  periodo_fin: z
-    .string()
-    .optional()
-    .refine(
-      (val) => !val || /^\d{2}\/\d{4}$/.test(val),
-      "Formato inválido. Usa MM/AAAA (ej: 12/2023)"
-    ),
-  es_trabajo_actual: z.boolean().optional(),
-});
+const experienciaSchema = z
+  .object({
+    compania: z.string().min(1, "El nombre de la compañía es obligatorio"),
+    cargo: z.string().min(1, "El cargo es obligatorio"),
+    actividades: z
+      .string()
+      .min(10, "Describe las actividades realizadas")
+      .max(1500, "Máximo 1500 caracteres"),
+    periodo_inicio: z
+      .string()
+      .min(1, "Ingresa el período de inicio")
+      .regex(/^\d{2}\/\d{4}$/, "Formato inválido. Usa MM/AAAA (ej: 03/2021)"),
+    periodo_fin: z
+      .string()
+      .optional(),
+    es_trabajo_actual: z.boolean().optional(),
+  })
+  .superRefine((data, ctx) => {
+    if (!data.es_trabajo_actual) {
+      if (!data.periodo_fin || data.periodo_fin.trim() === "") {
+        ctx.addIssue({
+          path: ["periodo_fin"],
+          code: z.ZodIssueCode.custom,
+          message: "Ingresa el período de fin o marca 'Trabajo actualmente aquí'",
+        });
+      } else if (!/^\d{2}\/\d{4}$/.test(data.periodo_fin)) {
+        ctx.addIssue({
+          path: ["periodo_fin"],
+          code: z.ZodIssueCode.custom,
+          message: "Formato inválido. Usa MM/AAAA (ej: 12/2023)",
+        });
+      }
+    }
+  });
 
 const schema = z.object({
   experiencia: z.array(experienciaSchema).min(1, "Agrega al menos una experiencia"),
@@ -153,6 +167,7 @@ export default function Step2Experience({ onNext, onPrev }) {
               <FormField
                 label="Período de Fin"
                 error={errs?.periodo_fin?.message}
+                required={!isActual}
                 hint={isActual ? `Se usará 12/${new Date().getFullYear()} automáticamente` : "Formato: MM/AAAA"}
               >
                 <Input

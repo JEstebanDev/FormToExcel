@@ -66,8 +66,8 @@ export const ROLE_TECH_CATALOG = {
   automatizador: {
     lenguaje: ["Conceptos generales Programacion reactiva", "Java", "Python", "SQL", "XPATH"],
     framework: ["Playwright", "BDD Framework", "Data Driven Framework", "FRAMEWORK DE AUTOMATIZACION: SERENITY", "Karate Framework", "Winium"],
-    otros: ["Arquitectura de microservicios", "Murex AWS Essentials", "BDD (Gherkin / Serenity)", "DevOps", "DevOps CI", "DevOps CT", "Gherkin / Cucumber", "Patron de diseno ScreenPlay", "Pruebas Unitarias", "REST", "SOAP", "SOLID", "WinAppDriver"],
-    herramienta: ["Analisis Estatico (SonarQube)", "Appium", "Azure DevOps", "Git", "GraphQL", "Postman", "Selenium", "SoapUI"],
+    otros: ["Arquitectura de microservicios", "Murex AWS Essentials", "BDD (Gherkin / Serenity)", "Gherkin / Cucumber", "Patron de diseno ScreenPlay", "Pruebas Unitarias", "REST", "SOAP", "SOLID", "WinAppDriver"],
+    herramienta: ["Analisis Estatico (SonarQube)", "Appium", "Git", "GraphQL", "Postman", "Selenium", "SoapUI"],
     plataforma: ["AWS RDS", "Kobiton"],
     aplicacion: ["Micro Focus Extra! X-treme (MyExtra)"],
     baseDeDatos: ["DynamoDB", "DB2", "MongoDB", "MYSQL", "ORACLE", "PostgreSQL", "SQL Server"],

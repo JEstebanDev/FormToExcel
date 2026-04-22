@@ -4,27 +4,27 @@
 export const COLOMBIA_DEPARTMENTS = [
   {
     department: "Amazonas",
-    cities: ["Leticia", "Puerto Nariño", "La Chorrera", "El Encanto", "La Pedrera", "Tarapacá"],
+    cities: ["Leticia", "Puerto Narino", "La Chorrera", "El Encanto", "La Pedrera", "Tarapaca"],
   },
   {
     department: "Antioquia",
     cities: [
-      "Medellín", "Bello", "Itagüí", "Envigado", "Rionegro", "Apartadó", "Turbo", "Caucasia",
+      "Medellin", "Bello", "Itagui", "Envigado", "Rionegro", "Apartado", "Turbo", "Caucasia",
       "Sabaneta", "Copacabana", "La Estrella", "Caldas", "Girardota", "Barbosa", "Marinilla",
-      "El Carmen de Viboral", "Guarne", "Yarumal", "Andes", "Fredonia", "Jericó",
-      "Santa Fe de Antioquia", "Ciudad Bolívar", "Concordia", "Titiribi", "Amagá", "Abejorral",
-      "Sonsón", "Puerto Berrío", "Segovia", "Remedios", "El Bagre", "Zaragoza",
+      "El Carmen de Viboral", "Guarne", "Yarumal", "Andes", "Fredonia", "Jerico",
+      "Santa Fe de Antioquia", "Ciudad Bolivar", "Concordia", "Titiribi", "Amaga", "Abejorral",
+      "Sonson", "Puerto Berrio", "Segovia", "Remedios", "El Bagre", "Zaragoza",
     ],
   },
   {
     department: "Arauca",
-    cities: ["Arauca", "Arauquita", "Saravena", "Tame", "Fortul", "Puerto Rondón", "Cravo Norte"],
+    cities: ["Arauca", "Arauquita", "Saravena", "Tame", "Fortul", "Puerto Rondon", "Cravo Norte"],
   },
   {
-    department: "Atlántico",
+    department: "Atlantico",
     cities: [
       "Barranquilla", "Soledad", "Malambo", "Sabanalarga", "Baranoa", "Galapa",
-      "Puerto Colombia", "Palmar de Varela", "Santo Tomás", "Ponedera",
+      "Puerto Colombia", "Palmar de Varela", "Santo Tomas", "Ponedera",
     ],
   },
   {
@@ -32,31 +32,31 @@ export const COLOMBIA_DEPARTMENTS = [
     cities: ["Bogota"],
   },
   {
-    department: "Bolívar",
+    department: "Bolivar",
     cities: [
-      "Cartagena", "Magangué", "El Carmen de Bolívar", "Mompós", "Turbaco", "Arjona",
-      "San Juan Nepomuceno", "San Jacinto", "Simití", "Achí",
+      "Cartagena", "Magangue", "El Carmen de Bolivar", "Mompos", "Turbaco", "Arjona",
+      "San Juan Nepomuceno", "San Jacinto", "Simiti", "Achi",
     ],
   },
   {
-    department: "Boyacá",
+    department: "Boyaca",
     cities: [
-      "Tunja", "Duitama", "Sogamoso", "Chiquinquirá", "Paipa", "Puerto Boyacá",
-      "Moniquirá", "Ramiriquí", "Villa de Leyva", "Soatá", "Guateque", "Garagoa",
+      "Tunja", "Duitama", "Sogamoso", "Chiquinquira", "Paipa", "Puerto Boyaca",
+      "Moniquira", "Ramiriqui", "Villa de Leyva", "Soata", "Guateque", "Garagoa",
     ],
   },
   {
     department: "Caldas",
     cities: [
-      "Manizales", "Chinchiná", "Riosucio", "Villamaría", "La Dorada", "Anserma",
-      "Aguadas", "Salamina", "Neira", "Supía", "Manzanares",
+      "Manizales", "Chinchina", "Riosucio", "Villamaria", "La Dorada", "Anserma",
+      "Aguadas", "Salamina", "Neira", "Supia", "Manzanares",
     ],
   },
   {
-    department: "Caquetá",
+    department: "Caqueta",
     cities: [
-      "Florencia", "San Vicente del Caguán", "Puerto Rico", "El Doncello",
-      "La Montañita", "Belén de los Andaquíes", "Cartagena del Chairá",
+      "Florencia", "San Vicente del Caguan", "Puerto Rico", "El Doncello",
+      "La Montanita", "Belen de los Andaquies", "Cartagena del Chaira",
     ],
   },
   {
@@ -69,51 +69,51 @@ export const COLOMBIA_DEPARTMENTS = [
   {
     department: "Cauca",
     cities: [
-      "Popayán", "Santander de Quilichao", "Puerto Tejada", "Patía", "Miranda",
-      "Corinto", "Guachené", "Piendamó", "El Tambo", "Timbío",
+      "Popayan", "Santander de Quilichao", "Puerto Tejada", "Patia", "Miranda",
+      "Corinto", "Guachene", "Piendamo", "El Tambo", "Timbio",
     ],
   },
   {
     department: "Cesar",
     cities: [
       "Valledupar", "Aguachica", "Codazzi", "Bosconia", "El Copey", "La Paz",
-      "Curumaní", "Pailitas", "Chimichagua", "Chiriguaná",
+      "Curumani", "Pailitas", "Chimichagua", "Chiriguana",
     ],
   },
   {
-    department: "Chocó",
+    department: "Choco",
     cities: [
-      "Quibdó", "Istmina", "Condoto", "Riosucio", "Bahía Solano",
-      "Nuquí", "Tadó", "Acandí", "Bojayá",
+      "Quibdo", "Istmina", "Condoto", "Riosucio", "Bahia Solano",
+      "Nuqui", "Tado", "Acandi", "Bojaya",
     ],
   },
   {
-    department: "Córdoba",
+    department: "Cordoba",
     cities: [
-      "Montería", "Sahagún", "Lorica", "Cereté", "Montelíbano", "Planeta Rica",
-      "Tierralta", "Ayapel", "Chinú", "San Pelayo",
+      "Monteria", "Sahagun", "Lorica", "Cerete", "Montelibano", "Planeta Rica",
+      "Tierralta", "Ayapel", "Chinu", "San Pelayo",
     ],
   },
   {
     department: "Cundinamarca",
     cities: [
-      "Soacha", "Girardot", "Zipaquirá", "Facatativá", "Fusagasugá", "Mosquera",
-      "Chía", "Cajicá", "Madrid", "Funza", "Sibaté", "La Mesa", "Villeta",
-      "Tocancipá", "Sopó", "Tabio", "Tenjo", "Cota", "El Rosal", "Subachoque",
+      "Soacha", "Girardot", "Zipaquira", "Facatativa", "Fusagasuga", "Mosquera",
+      "Chia", "Cajica", "Madrid", "Funza", "Sibate", "La Mesa", "Villeta",
+      "Tocancipa", "Sopo", "Tabio", "Tenjo", "Cota", "El Rosal", "Subachoque",
     ],
   },
   {
-    department: "Guainía",
-    cities: ["Inírida", "Barranco Minas", "Mapiripana"],
+    department: "Guainia",
+    cities: ["Inirida", "Barranco Minas", "Mapiripana"],
   },
   {
     department: "Guaviare",
-    cities: ["San José del Guaviare", "Calamar", "El Retorno", "Miraflores"],
+    cities: ["San Jose del Guaviare", "Calamar", "El Retorno", "Miraflores"],
   },
   {
     department: "Huila",
     cities: [
-      "Neiva", "Pitalito", "Garzón", "La Plata", "Campoalegre", "Rivera",
+      "Neiva", "Pitalito", "Garzon", "La Plata", "Campoalegre", "Rivera",
       "Palermo", "Gigante", "Algeciras", "Tello",
     ],
   },
@@ -127,39 +127,39 @@ export const COLOMBIA_DEPARTMENTS = [
   {
     department: "Magdalena",
     cities: [
-      "Santa Marta", "Ciénaga", "Fundación", "El Banco", "Aracataca",
-      "Plato", "Pivijay", "Santa Bárbara de Pinto", "Salamina",
+      "Santa Marta", "Cienaga", "Fundacion", "El Banco", "Aracataca",
+      "Plato", "Pivijay", "Santa Barbara de Pinto", "Salamina",
     ],
   },
   {
     department: "Meta",
     cities: [
-      "Villavicencio", "Acacías", "Granada", "Puerto López", "San Martín",
+      "Villavicencio", "Acacias", "Granada", "Puerto Lopez", "San Martin",
       "Cumaral", "Restrepo", "Puerto Lleras", "La Macarena",
     ],
   },
   {
-    department: "Nariño",
+    department: "Narino",
     cities: [
-      "Pasto", "Ipiales", "Tumaco", "Túquerres", "La Unión", "Samaniego",
-      "Sandoná", "El Tambo", "Barbacoas", "Cumbal", "Ricaurte",
+      "Pasto", "Ipiales", "Tumaco", "Tuquerres", "La Union", "Samaniego",
+      "Sandona", "El Tambo", "Barbacoas", "Cumbal", "Ricaurte",
     ],
   },
   {
     department: "Norte de Santander",
     cities: [
-      "Cúcuta", "Ocaña", "Pamplona", "Villa del Rosario", "Los Patios",
-      "Tibú", "El Zulia", "Sardinata", "Convención",
+      "Cucuta", "Ocana", "Pamplona", "Villa del Rosario", "Los Patios",
+      "Tibu", "El Zulia", "Sardinata", "Convencion",
     ],
   },
   {
     department: "Putumayo",
-    cities: ["Mocoa", "Puerto Asís", "Villagarzón", "Orito", "Valle del Guamuez", "Sibundoy"],
+    cities: ["Mocoa", "Puerto Asis", "Villagarzon", "Orito", "Valle del Guamuez", "Sibundoy"],
   },
   {
-    department: "Quindío",
+    department: "Quindio",
     cities: [
-      "Armenia", "Calarcá", "Montenegro", "Quimbaya", "Circasia",
+      "Armenia", "Calarca", "Montenegro", "Quimbaya", "Circasia",
       "La Tebaida", "Filandia", "Salento", "Buenavista",
     ],
   },
@@ -167,49 +167,49 @@ export const COLOMBIA_DEPARTMENTS = [
     department: "Risaralda",
     cities: [
       "Pereira", "Dosquebradas", "Santa Rosa de Cabal", "La Virginia",
-      "Belén de Umbría", "Santuario", "Mistrató", "Quinchía",
+      "Belen de Umbria", "Santuario", "Mistrato", "Quinchia",
     ],
   },
   {
-    department: "San Andrés y Providencia",
-    cities: ["San Andrés", "Providencia"],
+    department: "San Andres y Providencia",
+    cities: ["San Andres", "Providencia"],
   },
   {
     department: "Santander",
     cities: [
-      "Bucaramanga", "Floridablanca", "Girón", "Piedecuesta", "Barrancabermeja",
-      "San Gil", "Socorro", "Vélez", "Málaga", "Barbosa", "Lebrija", "Sabana de Torres",
+      "Bucaramanga", "Floridablanca", "Giron", "Piedecuesta", "Barrancabermeja",
+      "San Gil", "Socorro", "Velez", "Malaga", "Barbosa", "Lebrija", "Sabana de Torres",
     ],
   },
   {
     department: "Sucre",
     cities: [
-      "Sincelejo", "Corozal", "Sampués", "San Marcos", "Tolú",
+      "Sincelejo", "Corozal", "Sampues", "San Marcos", "Tolu",
       "Ovejas", "San Benito Abad", "Majagual",
     ],
   },
   {
     department: "Tolima",
     cities: [
-      "Ibagué", "Espinal", "Melgar", "Honda", "Chaparral", "Líbano",
-      "Fresno", "Purificación", "Guamo", "Mariquita",
+      "Ibague", "Espinal", "Melgar", "Honda", "Chaparral", "Libano",
+      "Fresno", "Purificacion", "Guamo", "Mariquita",
     ],
   },
   {
     department: "Valle del Cauca",
     cities: [
-      "Cali", "Palmira", "Buenaventura", "Tuluá", "Buga", "Cartago",
-      "Yumbo", "Jamundí", "Candelaria", "Florida", "Pradera", "Dagua",
-      "La Unión", "Roldanillo", "Sevilla", "Caicedonia",
+      "Cali", "Palmira", "Buenaventura", "Tulua", "Buga", "Cartago",
+      "Yumbo", "Jamundi", "Candelaria", "Florida", "Pradera", "Dagua",
+      "La Union", "Roldanillo", "Sevilla", "Caicedonia",
     ],
   },
   {
-    department: "Vaupés",
-    cities: ["Mitú", "Carurú", "Taraira"],
+    department: "Vaupes",
+    cities: ["Mitu", "Caruru", "Taraira"],
   },
   {
     department: "Vichada",
-    cities: ["Puerto Carreño", "La Primavera", "Santa Rosalía", "Cumaribo"],
+    cities: ["Puerto Carreno", "La Primavera", "Santa Rosalia", "Cumaribo"],
   },
 ];
 
