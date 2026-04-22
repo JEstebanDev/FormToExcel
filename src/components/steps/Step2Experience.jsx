@@ -48,6 +48,7 @@ export default function Step2Experience({ onNext, onPrev }) {
     control,
     watch,
     trigger,
+    getValues,
     formState: { errors },
   } = useForm({
     mode: "onBlur",
@@ -193,7 +194,10 @@ export default function Step2Experience({ onNext, onPrev }) {
       <div className="flex justify-between pt-2">
         <button
           type="button"
-          onClick={onPrev}
+          onClick={() => {
+            updateData({ experiencia: getValues("experiencia") });
+            onPrev();
+          }}
           className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
         >
           ← Anterior

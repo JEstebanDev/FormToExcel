@@ -31,6 +31,7 @@ export default function Step4Education({ onPrev, onGenerate, isGenerating }) {
     handleSubmit,
     control,
     trigger,
+    getValues,
     formState: { errors },
   } = useForm({
     mode: "onBlur",
@@ -135,7 +136,10 @@ export default function Step4Education({ onPrev, onGenerate, isGenerating }) {
       <div className="flex justify-between pt-2 border-t border-gray-200 mt-2">
         <button
           type="button"
-          onClick={onPrev}
+          onClick={() => {
+            updateData({ certificaciones: getValues("certificaciones") });
+            onPrev();
+          }}
           className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
         >
           ← Anterior
