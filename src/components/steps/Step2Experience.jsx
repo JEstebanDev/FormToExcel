@@ -168,7 +168,7 @@ export default function Step2Experience({ onNext, onPrev }) {
                 label="Período de Fin"
                 error={errs?.periodo_fin?.message}
                 required={!isActual}
-                hint={isActual ? `Se usará 12/${new Date().getFullYear()} automáticamente` : "Formato: MM/AAAA"}
+                hint={isActual ? `Se usará ${String(new Date().getMonth() + 1).padStart(2, "0")}/${new Date().getFullYear()} automáticamente` : "Formato: MM/AAAA"}
               >
                 <Input
                   placeholder="12/2023"
@@ -192,8 +192,10 @@ export default function Step2Experience({ onNext, onPrev }) {
                   const checked = e.target.checked;
                   setValue(`experiencia.${index}.es_trabajo_actual`, checked);
                   if (checked) {
-                    const currentYear = new Date().getFullYear();
-                    setValue(`experiencia.${index}.periodo_fin`, `12/${currentYear}`);
+                    const now = new Date();
+                    const currentMonth = String(now.getMonth() + 1).padStart(2, "0");
+                    const currentYear = now.getFullYear();
+                    setValue(`experiencia.${index}.periodo_fin`, `${currentMonth}/${currentYear}`);
                   } else {
                     setValue(`experiencia.${index}.periodo_fin`, "");
                   }
